@@ -15,7 +15,7 @@ exports.seedUsers = async () => {
         const userCount = await userModel.countDocuments();
 
         if (userCount > 0) {
-            console.log('Users already exist — skipping seeding');
+            //console.log('Users already exist — skipping seeding');
             return;
         }
         

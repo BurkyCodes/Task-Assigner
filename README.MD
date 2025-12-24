@@ -6,10 +6,14 @@ After cloning the repository
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.1.
 
 ## Cd to the frontend app
+```bash
 cd frontend
+```
 
 ## Install dependencies
+```bash
 npm install
+```
 
 
 ## Development server

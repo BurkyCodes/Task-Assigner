@@ -74,7 +74,7 @@ npm run dev
 
 Once the server is running, open your browser and navigate to `http://localhost:5000/`. The application will automatically reload whenever you modify any of the source files.
 
-## Setting up environment variables(Optional)
+## Setting up environment variables(Optional - You can use mine as it is)
 
 To get started you will need to setup your DATABASE_URI connection string
 If you havent used MongoDb before go to `https://www.mongodb.com/products/platform/atlas-database` and create and add a database.

@@ -53,10 +53,15 @@ This project was generated using Express.js, MongoDB as the database and mongoos
 
 ## Cd to the server repository
 
-cd SERVER
+```bash
+cd server
+```
 
 ## Install dependencies
+
+```bash
 npm install
+```
 
 ## Development server
 

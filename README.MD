@@ -76,13 +76,13 @@ Once the server is running, open your browser and navigate to `http://localhost:
 
 ## Setting up environment variables(Optional)
 
-To get started you will need to setup your MONGODB_URI connection string
+To get started you will need to setup your DATABASE_URI connection string
 If you havent used MongoDb before go to `https://www.mongodb.com/products/platform/atlas-database` and create and add a database.
 
 cd backend
 
 Change the current .env file and add your URI with the format
-MONGODB_URI = "connection string"
+DATABASE_URI = "connection string"
 
 
 Once the server is running, open your browser and navigate to `http://localhost:5000/`. The application will automatically reload whenever you modify any of the source files.

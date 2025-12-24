@@ -85,8 +85,11 @@ MONGODB_URI = "connection string"
 
 Once the server is running, open your browser and navigate to `http://localhost:5000/`. The application will automatically reload whenever you modify any of the source files.
 
+## API Documentation
+After starting the server, you can access the API documentation via Swagger UI at:
 
+http://localhost:5000/api-docs/
 
-
+This interface allows you to explore all available endpoints, view request and response schemas, and test the API directly from the browser.
 
 

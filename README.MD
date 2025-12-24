@@ -94,4 +94,7 @@ http://localhost:5000/api-docs/
 
 This interface allows you to explore all available endpoints, view request and response schemas, and test the API directly from the browser.
 
+## Prefilled Users
+mark, nena, admin, winnie, john, burky
+
 

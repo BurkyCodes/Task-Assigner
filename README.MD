@@ -1,0 +1,92 @@
+After cloning the repository
+
+
+# Running the Frontend
+
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.1.
+
+## Cd to the frontend app
+cd frontend
+
+## Install dependencies
+npm install
+
+
+## Development server
+
+To start a local development server, run:
+
+```bash
+ng serve
+```
+
+Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+
+## Code scaffolding
+
+Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+
+```bash
+ng generate component component-name
+```
+
+For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+
+```bash
+ng generate --help
+```
+
+## Building
+
+To build the project run:
+
+```bash
+ng build
+```
+
+This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+
+
+
+# Running the Backend
+
+This project was generated using Express.js, MongoDB as the database and mongoose ase the ORM.
+
+
+
+## Cd to the server repository
+
+cd SERVER
+
+## Install dependencies
+npm install
+
+## Development server
+
+To start a local development server, run:
+
+```bash
+npm run dev
+```
+
+
+Once the server is running, open your browser and navigate to `http://localhost:5000/`. The application will automatically reload whenever you modify any of the source files.
+
+## Setting up environment variables
+
+To get started you will need to setup your MONGODB_URI connection string
+If you havent used MongoDb before go to `https://www.mongodb.com/products/platform/atlas-database` and create and add a database.
+
+cd backend
+
+Create a .env file and add your URI with the format
+MONGODB_URI = "connection string"
+
+
+Once the server is running, open your browser and navigate to `http://localhost:5000/`. The application will automatically reload whenever you modify any of the source files.
+
+
+
+
+
+

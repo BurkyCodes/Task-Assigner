@@ -1,4 +1,4 @@
-const { login, getUsers } = require("../controllers/userController");
+const { login, getUsers,checkSession,logout } = require("../controllers/userController");
 
 const userRouter = require("express").Router();
 
@@ -61,5 +61,7 @@ const userRouter = require("express").Router();
 
 userRouter.route("/login").post(login);
 userRouter.route("/").get(getUsers);
+userRouter.route('/logout').post(logout);
+userRouter.route('/session').get(checkSession); 
 
 exports.userRouter = userRouter;

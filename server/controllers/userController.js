@@ -30,10 +30,7 @@ exports.login = async (req, res) => {
         }
 
         //creating a session 
-        req.session.user = {
-            id: user._id,
-            userName: user.userName
-        };
+        req.session.userId = user._id;
 
         req.session.cookie.maxAge = 24 * 60 * 60 * 1000;
 
@@ -58,6 +55,60 @@ exports.login = async (req, res) => {
         });
     }
 }
+
+
+exports.checkSession = async (req, res) => {
+  try {
+    //console.log('Session check - Session data:', req.session)
+    
+    if (req.session && req.session.userId) {
+      const user = await userModel.findById(req.session.userId).select('-password');
+      
+      if (user) {
+        return res.status(200).json({
+          success: true,
+          message: 'Session is valid',
+          user: {
+            _id: user._id,
+            username: user.username,
+            email: user.email
+          }
+        });
+      }
+    }
+
+    return res.status(200).json({
+      success: false,
+      message: 'No active session'
+    });
+    
+  } catch (error) {
+    console.error('Session check error:', error);
+    return res.status(500).json({
+      success: false,
+      message: 'Internal server error',
+      error: error.message
+    });
+  }
+};
+
+exports.logout = (req, res) => {
+  if (req.session) {
+    delete req.session.userId; 
+    req.session.destroy((err) => {
+      if (err) {
+        console.error('Logout error:', err);
+        return res.status(500).json({ success: false, message: 'Logout failed' });
+      }
+      res.clearCookie('task-manager-session', { path: '/' });
+      return res.status(200).json({ success: true, message: 'Logged out successfully' });
+    });
+  } else {
+    res.status(200).json({ success: true, message: 'Logged out successfully' });
+  }
+};
+
+
 
 exports.getUsers = async(req,res) => {
     try {

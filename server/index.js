@@ -5,6 +5,8 @@ const { userRouter } = require('./routes/userRoute');
 const { taskRouter } = require('./routes/taskRoute');
 const { seedUsers } = require('./helpers/seedUsers');
 const session = require("express-session");
+const swaggerUi = require('swagger-ui-express');
+const swaggerSpecs = require('./swagger');
 
 
 require('dotenv').config();
@@ -45,11 +47,13 @@ app.use(
     saveUninitialized: false,
     cookie: {
       httpOnly: true,
-      secure: false, // true only with HTTPS
+      secure: false, 
       maxAge: 24 * 60 * 60 * 1000
     }
   })
 );
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpecs));
 
 
 app.use("/users",userRouter);
